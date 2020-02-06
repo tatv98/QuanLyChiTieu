@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:background="@drawable/layout_border"
+        android:orientation="vertical">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thống kê"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#FF9800"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                app:layout_constraintRight_toLeftOf="@+id/spnDate"
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#2196F3"
+                android:text="Tháng"
+                android:textSize="18sp"
+                tools:ignore="MissingConstraints" />
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spnDate"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#2196F3"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/custom_button"
+                android:layout_marginRight="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tổng thu"
+                    android:textColor="#3F51B5"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/tvSumIncome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF5722"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="500000đ"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/custom_button"
+                android:layout_marginLeft="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tổng chi"
+                    android:textColor="#3F51B5"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:id="@+id/tvSumExpense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FF5722"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="100000đ"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400sp"
+        android:background="@drawable/layout_border"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="10dp">
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/barChar"
+            android:layout_width="match_parent"
+            android:layout_height="350sp">
+
+        </com.github.mikephil.charting.charts.BarChart>
+    </RelativeLayout>
+</LinearLayout>

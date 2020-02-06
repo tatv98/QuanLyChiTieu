@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/itemAddIncome" android:title="Thêm khoản thu" />
+    <item android:id="@+id/itemAddExpense" android:title="Thêm khoản chi" />
+
+
+</menu>

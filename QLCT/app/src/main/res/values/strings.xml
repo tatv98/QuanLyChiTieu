@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">QL chi tiêu</string>
+    <string name="title">Quản Lý Chi Tiêu</string>
+    <string name="signin">Đăng Nhập</string>
+    <string name="singup">Đăng Ký</string>
+    <string name="submit">Xác Nhận</string>
+    <string name="signin_acount">Đăng Ký Tài Khoản</string>
+    <string name="title_activity_home_screen">HomeScreen</string>
+</resources>
